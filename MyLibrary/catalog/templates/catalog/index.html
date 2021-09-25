@@ -1,0 +1,18 @@
+{% extends 'catalog/base.html' %}
+
+{% block content %}
+<h1>{{title}}</h1>
+<ul>
+    {% for p in books %}
+    <li>
+        <h2>{{p.title}}</h2>
+        <p>{{p.author}}</p>
+        <p>{{p.picture}}</p>
+        <p>{{p.content}}</p>
+        <p>{{p.time_create}}</p>
+        <hr>
+    </li>
+    {% endfor %}
+</ul>
+
+{% endblock content %}
